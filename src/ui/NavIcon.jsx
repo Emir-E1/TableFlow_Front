@@ -1,14 +1,16 @@
-import { HugeiconsIcon } from "@hugeicons/react";
 import { NavLink } from "react-router-dom";
 
-function NavIcon({ icon, path }) {
+function NavIcon({ Icon, path }) {
+  const IconRender = Icon;
   return (
-    <div
-      href={path}
-      className="w-14 h-14  flex items-center justify-center rounded-xl leading-none"
+    <NavLink
+      to={path}
+      className={({ isActive }) =>
+        `w-14 h-14 flex items-center justify-center text-primary rounded-xl leading-none ${isActive ? "bg-primary text-white" : ""}`
+      }
     >
-      <HugeiconsIcon icon={icon} size={26} className="block text-primary" />
-    </div>
+      <IconRender size={24} className="" />
+    </NavLink>
   );
 }
 

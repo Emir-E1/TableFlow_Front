@@ -1,0 +1,84 @@
+{
+    "menus": [
+      {
+        "id": 1,
+        "name": "Spicy seasoned seafood noodles",
+        "image": "/images/menu/seafood-noodles.png",
+        "price": 2.29,
+        "stock": 20,
+        "category": "hot"
+      },
+      {
+        "id": 2,
+        "name": "Salted pasta with mushroom sauce",
+        "image": "/images/menu/mushroom-pasta.png",
+        "price": 2.69,
+        "stock": 11,
+        "category": "hot"
+      },
+      {
+        "id": 3,
+        "name": "Beef dumpling in hot and sour soup",
+        "image": "/images/menu/beef-dumpling-soup.png",
+        "price": 2.99,
+        "stock": 16,
+        "category": "soup"
+      },
+      {
+        "id": 4,
+        "name": "Healthy noodle with spinach leaf",
+        "image": "/images/menu/spinach-noodle.png",
+        "price": 3.29,
+        "stock": 22,
+        "category": "cold"
+      },
+      {
+        "id": 5,
+        "name": "Hot spicy fried rice with omelet",
+        "image": "/images/menu/spicy-fried-rice.png",
+        "price": 3.49,
+        "stock": 13,
+        "category": "hot"
+      },
+      {
+        "id": 6,
+        "name": "Spicy instant noodle with special omelette",
+        "image": "/images/menu/instant-noodle-omelette.png",
+        "price": 3.59,
+        "stock": 17,
+        "category": "soup"
+      },
+      {
+        "id": 7,
+        "name": "Grilled chicken teriyaki bowl",
+        "image": "/images/menu/grilled-chicken-teriyaki.png",
+        "price": 4.19,
+        "stock": 15,
+        "category": "grill"
+      },
+      {
+        "id": 8,
+        "name": "Fresh vegetable spring rolls",
+        "image": "/images/menu/spring-rolls.png",
+        "price": 1.99,
+        "stock": 30,
+        "category": "appetizer"
+      },
+      {
+        "id": 9,
+        "name": "Creamy mango dessert bowl",
+        "image": "/images/menu/mango-dessert.png",
+        "price": 2.49,
+        "stock": 12,
+        "category": "dessert"
+      },
+      {
+        "id": 10,
+        "name": "Grilled beef barbecue plate",
+        "image": "/images/menu/grilled-beef-bbq.png",
+        "price": 4.79,
+        "stock": 10,
+        "category": "grill"
+      }
+    ]
+  }
