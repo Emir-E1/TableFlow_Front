@@ -1,11 +1,7 @@
 import Card from "../../ui/Card";
 
-function MenuItem() {
-  return (
-    <div>
-      <Card />
-    </div>
-  );
+function MenuItem({ className }) {
+  return <Card className={`w-full h-full ${className}`} />;
 }
 
 export default MenuItem;

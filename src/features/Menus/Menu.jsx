@@ -8,7 +8,7 @@ function Menu() {
     <div className="h-full bg-base-dark-1 gap-6  p-1 flex flex-col">
       <MenuHeader />
       <MenuActionBar />
-      <div className="flex-1 min-h-0 bg-slate-700">
+      <div className="flex-1 min-h-0 ">
         <MenuTable />
       </div>
     </div>

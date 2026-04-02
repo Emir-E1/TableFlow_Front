@@ -6,7 +6,7 @@ function NavIcon({ Icon, path }) {
     <NavLink
       to={path}
       className={({ isActive }) =>
-        `w-14 h-14 flex items-center justify-center text-primary rounded-xl leading-none ${isActive ? "bg-primary text-white" : ""}`
+        `w-14 h-14 flex items-center justify-center text-primary rounded-xl leading-none ${isActive ? "bg-primary shadow-sm shadow-primary/50 text-white" : ""}`
       }
     >
       <IconRender size={24} className="" />

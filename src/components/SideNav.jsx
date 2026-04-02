@@ -22,7 +22,7 @@ const navIcons = [
 
 function SideNav() {
   const location = useLocation();
-  console.log(location);
+
   return (
     <aside className="bg-base-dark-2 overflow-hidden flex items-center flex-col gap-8 min-w-28 rounded-l-lg p-8">
       <Logo />
@@ -33,20 +33,16 @@ function SideNav() {
             return (
               <div
                 key={e.path}
-                className={`p-2 relative z-50 ${
-                  isActive
-                    ? "bg-base-dark-1  after:content-[''] after:absolute  after:-right-10 after:top-0 after:h-full after:w-full after:bg-base-dark-1 after:rounded-l-xl "
-                    : ""
-                }`}
+                className={`p-2 ${isActive ? "bg-base-dark-1 rounded-xl" : ""}`}
               >
-                <NavIcon Icon={e.Icon} path={e.path} key={e.path} />
+                <NavIcon Icon={e.Icon} path={e.path} />
               </div>
             );
           })}
         </div>
 
         <div className="mt-auto">
-          <NavIcon Icon={LogOut} path={"/"} key="logout" />
+          <NavIcon Icon={LogOut} path={"/"} />
         </div>
       </div>
     </aside>

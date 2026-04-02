@@ -1,4 +1,4 @@
-function Input({ placeholder, Icon }) {
+function Input({ placeholder, Icon, width, height, className = "", ...props }) {
   return (
     <div className="relative text-white">
       {Icon && (
@@ -9,11 +9,16 @@ function Input({ placeholder, Icon }) {
       )}
       <input
         placeholder={placeholder}
+        style={{
+          ...(width != null ? { width } : {}),
+          ...(height != null ? { height } : {}),
+        }}
         className={
           Icon
-            ? "w-full pl-10 pr-4 py-3 bg-base-form rounded-lg outline-none"
-            : " px-4 py-3 bg-base-form rounded-lg outline-none"
+            ? `${width == null ? "w-full " : ""}pl-10 pr-4 py-3 bg-base-form rounded-lg outline-none ${className}`
+            : `${width == null ? "w-full " : ""}px-4 py-3 bg-base-form rounded-lg outline-none ${className}`
         }
+        {...props}
       />
     </div>
   );

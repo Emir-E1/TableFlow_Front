@@ -3,9 +3,9 @@ import SideNav from "../components/SideNav";
 
 function AppLayout() {
   return (
-    <div className="bg-base-dark-1 flex h-screen scroll-none">
+    <div className="bg-base-dark-1 flex h-screen min-h-0 w-full overflow-hidden">
       <SideNav />
-      <div className="flex-1 p-2 h-full overflow-hidden">
+      <div className="flex min-h-0 flex-1 overflow-y-auto p-2">
         <Outlet />
       </div>
     </div>
