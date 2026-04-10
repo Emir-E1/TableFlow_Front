@@ -1,22 +1,19 @@
-// PayementPanel.jsx — reçoit onClose pour fermer le portal
-import Button from "./../../ui/Button";
-import PaymenentHeader from "./../Payements/PaymenentHader";
+import Button from "../../ui/Button";
+import PaymenentHeader from "./PaymenentHeader";
 import PayementForm from "./PayementForm";
 
 function PayementPanel({ onClose }) {
   return (
-    <div className="flex  flex-col p-6 gap-6">
+    <div className="flex h-full min-h-full flex-col p-8 text-white">
       <PaymenentHeader />
       <PayementForm />
-      <div className="items-end">
-        <div className="flex   gap-3">
-          <Button className={"w-full"} onClick={onClose} type="secondary">
+      <div className="mt-auto grid grid-cols-2 gap-3 pt-10">
+        <Button className="w-full" onClick={onClose} type="secondary">
             Cancel
-          </Button>
-          <Button className={"w-full"} type="primary">
-            Confirm Payement
-          </Button>
-        </div>
+        </Button>
+        <Button className="w-full" type="primary">
+          Confirm Payment
+        </Button>
       </div>
     </div>
   );

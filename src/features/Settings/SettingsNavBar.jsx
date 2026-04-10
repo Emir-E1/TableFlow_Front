@@ -88,7 +88,7 @@ export default function SettingsNavBar() {
   }
 
   return (
-    <nav className="flex flex-col  bg-base-dark-2 rounded-2xl py-3 overflow-hidden">
+    <nav className="flex h-full max-h-full shrink-0 flex-col overflow-y-auto bg-base-dark-2 rounded-2xl py-3">
       {menuItems.map((item, index) => (
         <div key={item.id}>
           <MenuItem

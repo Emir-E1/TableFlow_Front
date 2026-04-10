@@ -1,6 +1,7 @@
-import { Trash2Icon } from "lucide-react";
+import { Trash, Trash2Icon } from "lucide-react";
 import Input from "../../ui/Input";
 import soup from "../../assets/soup.png";
+import IconButton from "../../ui/IconButton";
 
 function OrderRow() {
   return (
@@ -18,12 +19,7 @@ function OrderRow() {
           </div>
         </div>
         <div className="flex shrink-0 items-center gap-4">
-          <Input
-            type="number"
-            width={48}
-            height={48}
-            className="text-center p-4"
-          />
+          <Input width={48} height={48} className="text-center p-4" />
           <span className="whitespace-nowrap tabular-nums">$ 4.90</span>
         </div>
       </div>
@@ -31,9 +27,11 @@ function OrderRow() {
         <div className="min-w-0 flex-1">
           <Input placeholder="Please, just a little bit spicy only." />
         </div>
-        <div className="shrink-0 rounded-2xl border-2 border-primary p-4">
-          <Trash2Icon size={20} className="text-primary" />
-        </div>
+        <IconButton
+          icon={<Trash size={18} />}
+          variant="danger"
+          onClick={() => {}}
+        />
       </div>
     </div>
   );

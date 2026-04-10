@@ -1,11 +1,10 @@
 import PayementMethod from "./PayementMethod";
-import Input from "./../../ui/Input";
 import PayementDetails from "./PayementDetails";
 import PayementOrderType from "./PayementOrderType";
+
 function PayementForm() {
-  //method map over it
   return (
-    <div className="flex flex-col gap-4">
+    <div className="mt-7 flex flex-col gap-7">
       <PayementMethod />
       <PayementDetails />
       <PayementOrderType />

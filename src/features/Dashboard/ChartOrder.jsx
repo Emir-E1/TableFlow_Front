@@ -1,10 +1,12 @@
 import {
   ArrowDown,
   ArrowDownFromLine,
+  ChevronDown,
   LucideArrowDownNarrowWide,
   Settings,
 } from "lucide-react";
 import { ResponsiveContainer, RadialBarChart, RadialBar } from "recharts";
+import SelectInput from "../../ui/SelectInput";
 
 const data = [
   { name: "Delivery", value: 264, fill: "#4FC3F7" }, // bleu
@@ -18,10 +20,11 @@ function ChartOrder() {
       <header className="pt-6 pb-4 border-b-2 border-base-dark-line/50 px-2 justify-between flex items-center bg-base-dark-2 text-white">
         {" "}
         <h1 className="text-2xl font-semibold">Most Type Order </h1>
-        <div className="flex items-center gap-2 p-4 border-2 border-base-dark-line rounded-2xl">
-          <LucideArrowDownNarrowWide />
-          <p>Today</p>
-        </div>
+        <SelectInput
+          options={["Today", "Last Week", "Last Month"]}
+          icon={<ChevronDown size={20} className="text-white" />}
+          onChange={(val) => console.log(val)}
+        />
       </header>
 
       <div className="bg-base-dark-2 flex justify-center items-center pt-8    pb-10">

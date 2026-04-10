@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import plateImg from "../../assets/soup.png";
-
+import SelectInput from "../../ui/SelectInput";
 const ITEMS = [
   { name: "Spicy seasoned seafood noodles", ordered: 200 },
   { name: "Salted pasta with mushroom sauce", ordered: 120 },
@@ -12,13 +12,11 @@ function MostOrdered() {
     <div className=" w-full rounded-xl bg-base-dark-2 p-6">
       <div className="flex items-center justify-between gap-4 border-b border-base-dark-line pb-4">
         <h2 className="text-lg font-semibold text-white">Most Ordered</h2>
-        <button
-          type="button"
-          className="flex items-center gap-1 rounded-lg border border-base-dark-line px-3 py-1.5 text-sm text-text-light hover:bg-base-dark-1"
-        >
-          <span>Today</span>
-          <ChevronDown size={16} />
-        </button>
+        <SelectInput
+          options={["Today", "Last Week", "Last Month"]}
+          icon={<ChevronDown size={20} className="text-white" />}
+          onChange={(val) => console.log(val)}
+        />
       </div>
 
       <ul className="flex flex-col divide-y divide-base-dark-line">
