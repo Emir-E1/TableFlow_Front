@@ -10,7 +10,7 @@ function IconButton({
   const variants = {
     default: "border-white/10 hover:border-white/25 hover:bg-white/5",
     danger:
-      " border-primary  text-primary hover:text-white hover:bg-primary    ",
+      "border-primary text-primary hover:text-white hover:bg-primary",
   };
 
   return (

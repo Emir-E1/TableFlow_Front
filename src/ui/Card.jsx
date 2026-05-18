@@ -24,7 +24,7 @@ function Card({
           {description}
         </h3>
         <p className="text-white text-2xl font-bold">${price}</p>
-        <p className="text-orange-400 text-base hidden md:block">
+        <p className="text-primary text-base hidden md:block">
           {quantity} Available
         </p>
       </div>

@@ -48,7 +48,7 @@ function MenuItem({ icon, label, sub, isActive, onClick }) {
     <div
       onClick={onClick}
       className={`relative flex items-center gap-3 px-4 py-10 mx-2 rounded-xl cursor-pointer transition-colors duration-150
-        ${isActive ? "bg-red-900/30" : "hover:bg-white/5"}`}
+        ${isActive ? "bg-primary/30" : "hover:bg-white/5"}`}
     >
       <IconComponent
         size={20}
