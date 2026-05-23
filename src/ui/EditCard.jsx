@@ -1,6 +1,7 @@
 // EditCard.jsx
 import { PencilLine } from "lucide-react";
 import soup from "../assets/soup.png";
+import ShadeIconBtn from "./ShadeIconBtn";
 
 const EditCard = ({
   image = soup,
@@ -33,13 +34,8 @@ const EditCard = ({
       </div>
 
       {/* Bouton fixe en bas */}
-      <button
-        type="button"
-        className="flex w-full shrink-0 items-center justify-center gap-2 border-t border-gray-700/30 bg-primary/30 py-4 transition-colors hover:bg-primary/40"
-      >
-        <PencilLine size={16} color="#ea7c69" />
-        <span className="text-sm font-semibold text-primary">Edit dish</span>
-      </button>
+
+      <ShadeIconBtn label="Edit Dish" Icon={<PencilLine />} type={"editing"} />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Button from "../../ui/Button";
 import PaymenentHeader from "./PaymenentHeader";
 import PayementForm from "./PayementForm";
+import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
 function PayementPanel({ onClose }) {
   return (
@@ -8,12 +9,8 @@ function PayementPanel({ onClose }) {
       <PaymenentHeader />
       <PayementForm />
       <div className="mt-auto grid grid-cols-2 gap-3 pt-10">
-        <Button className="w-full" onClick={onClose} type="secondary">
-            Cancel
-        </Button>
-        <Button className="w-full" type="primary">
-          Confirm Payment
-        </Button>
+        <ShadeIconBtn label="Cancel" onClick={onClose} type="secondary" />
+        <ShadeIconBtn label="Confirm Payment" type="primary" />
       </div>
     </div>
   );

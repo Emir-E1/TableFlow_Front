@@ -1,4 +1,5 @@
 import Button from "../../ui/Button";
+import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
 function OrderBill({ onPay }) {
   function handleContinueToPayment() {
@@ -18,9 +19,11 @@ function OrderBill({ onPay }) {
         </div>
       </div>
 
-      <Button className={"rounded-xl"} onClick={handleContinueToPayment}>
-        Continue to Payment
-      </Button>
+      <ShadeIconBtn
+        label={"Continue to Payment"}
+        type={"primary"}
+        onClick={handleContinueToPayment}
+      />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { Trash, Trash2Icon } from "lucide-react";
 import Input from "../../ui/Input";
 import soup from "../../assets/soup.png";
 import IconButton from "../../ui/IconButton";
+import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
 function OrderRow() {
   return (
@@ -27,11 +28,7 @@ function OrderRow() {
         <div className="min-w-0 flex-1">
           <Input placeholder="Please, just a little bit spicy only." />
         </div>
-        <IconButton
-          icon={<Trash size={18} />}
-          variant="danger"
-          onClick={() => {}}
-        />
+        <ShadeIconBtn type="secondary" size="icon" Icon={<Trash size={20} />} />
       </div>
     </div>
   );

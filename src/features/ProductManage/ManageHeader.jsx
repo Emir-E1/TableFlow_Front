@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Settings2 } from "lucide-react";
+import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
 const categories = [
   "Hot Dishes",

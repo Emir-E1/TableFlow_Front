@@ -13,6 +13,11 @@ export default {
           DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
           foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
         },
+        status: {
+          completed: "#6BE2BE",
+          pending: "#FFB572",
+          preparing: "#9290FE",
+        },
         white: "white",
         text: {
           dark: "#3B5162",
