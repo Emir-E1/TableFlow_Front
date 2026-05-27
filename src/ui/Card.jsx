@@ -1,32 +1,32 @@
 import { useNavigate } from "react-router-dom";
-import soup from "../assets/soup.png";
+import { menuDishes } from "../data/menuDishes";
 
 function Card({
-  image,
-  description = "Spicy seasoned seafood noodles",
-  price = 19,
-  quantity = 20,
+  image = menuDishes[0].image,
+  description = menuDishes[0].description,
+  price = menuDishes[0].price,
+  quantity = menuDishes[0].quantity,
   className,
 }) {
   const navigate = useNavigate();
+
   return (
     <div
       onClick={() => navigate("orders")}
-      className={`relative bg-[#251D2B]/80 rounded-3xl flex flex-col items-center justify-center pt-16 px-6 pb-6 w-full h-full ${className}`}
+      className={`relative flex h-full w-full flex-col items-center justify-center rounded-3xl bg-purplish/80 px-6 pb-6 pt-16 ${className}`}
     >
       <img
-        src={image || soup}
-        className="absolute -top-12 left-1/2 -translate-x-1/2 w-28"
+        src={image}
+        alt={description}
+        className="absolute -top-12 left-1/2 w-28 -translate-x-1/2 object-contain"
       />
 
-      <div className="text-center flex flex-col gap-3">
-        <h3 className="text-white font-semibold text-xl max-w-60 leading-snug">
+      <div className="flex flex-col gap-3 text-center">
+        <h3 className="max-w-60 text-xl font-semibold leading-snug text-white">
           {description}
         </h3>
-        <p className="text-white text-2xl font-bold">${price}</p>
-        <p className="text-primary text-base hidden md:block">
-          {quantity} Available
-        </p>
+        <p className="text-2xl font-bold text-white">${price}</p>
+        <p className="text-base text-primary">{quantity} Available</p>
       </div>
     </div>
   );

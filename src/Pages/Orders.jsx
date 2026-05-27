@@ -2,20 +2,20 @@
 import { createPortal } from "react-dom";
 import { useNavigate, useLocation } from "react-router-dom";
 import OrdersPanel from "../features/Order/OrdersPanel";
-import PayementPanel from "../features/Payements/PayementPanel";
+import PaymentPanel from "../features/Payments/PaymentPanel";
 
 function Orders() {
   const navigate = useNavigate();
   const location = useLocation();
 
   // plus de useState — l'URL décide
-  const paymentOpen = location.pathname.includes("/payements");
-  const ordersPath = location.pathname.replace(/\/payements\/?$/, "");
+  const paymentOpen = location.pathname.includes("/payments");
+  const ordersPath = location.pathname.replace(/\/payments\/?$/, "");
 
   return (
     <>
       <div className="h-full flex flex-col bg-base-dark-2">
-        <OrdersPanel onPay={() => navigate("payements")} />
+        <OrdersPanel onPay={() => navigate("payments")} />
       </div>
 
       {paymentOpen &&
@@ -30,7 +30,7 @@ function Orders() {
                 <OrdersPanel onPay={() => {}} />
               </div>
               <div className="flex-1 h-full bg-base-dark-2">
-                <PayementPanel
+                <PaymentPanel
                   onClose={() => navigate(ordersPath, { replace: true })}
                 />
               </div>

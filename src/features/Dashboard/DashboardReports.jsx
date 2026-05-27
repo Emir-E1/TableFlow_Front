@@ -4,12 +4,12 @@
 import { Avatar, AvatarImage } from "../../components/ui/avatar";
 import { Settings } from "lucide-react";
 import { Badge } from "../../components/ui/badge";
+import { ScrollArea } from "../../components/ui/scroll-area";
+
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -54,52 +54,52 @@ const MOCK_ORDERS = [
 
 function DashboardReports() {
   return (
-    <div className="flex flex-col   rounded-xl bg-base-dark-2">
-      {" "}
-      <header className="pt-6 pb-4 px-5 flex justify-between items-center">
-        {" "}
+    <div className="flex h-full min-h-0 flex-col rounded-xl bg-base-dark-2">
+      <header className="flex items-center justify-between px-5 pb-4 pt-6">
         <h1 className="text-2xl font-semibold text-white">Order Report</h1>
         <div className="flex items-center gap-2 px-4 py-2 border-2 border-base-dark-1 rounded-2xl text-white">
           <Settings size={16} />
           <p>Filter Settings</p>
         </div>
       </header>
-      <section className="max-h-[400px] overflow-y-auto">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Customer</TableHead>
-              <TableHead>Menu</TableHead>
-              <TableHead>Amount</TableHead>
-              <TableHead>Status</TableHead>
-            </TableRow>
-          </TableHeader>
-
-          <TableBody>
-            {MOCK_ORDERS.map((order) => (
-              <TableRow key={order.id}>
-                <TableCell>
-                  <div className="flex items-center gap-3">
-                    <Avatar>
-                      <AvatarImage src="https://github.com/shadcn.png" />
-                    </Avatar>
-
-                    <span>{order.name}</span>
-                  </div>
-                </TableCell>
-
-                <TableCell className="text-white/60">{order.menu}</TableCell>
-
-                <TableCell>{order.amount}</TableCell>
-
-                <TableCell>
-                  <Badge variant={order.status}>{order.status}</Badge>
-                </TableCell>
+      <ScrollArea className="h-[400px]">
+        <section>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Customer</TableHead>
+                <TableHead>Menu</TableHead>
+                <TableHead>Amount</TableHead>
+                <TableHead>Status</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </section>
+            </TableHeader>
+
+            <TableBody>
+              {MOCK_ORDERS.map((order) => (
+                <TableRow key={order.id}>
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <Avatar>
+                        <AvatarImage src="https://github.com/shadcn.png" />
+                      </Avatar>
+
+                      <span>{order.name}</span>
+                    </div>
+                  </TableCell>
+
+                  <TableCell className="text-white/60">{order.menu}</TableCell>
+
+                  <TableCell>{order.amount}</TableCell>
+
+                  <TableCell>
+                    <Badge variant={order.status}>{order.status}</Badge>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </section>
+      </ScrollArea>
     </div>
   );
 }

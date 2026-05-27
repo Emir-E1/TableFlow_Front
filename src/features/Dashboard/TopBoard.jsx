@@ -6,7 +6,7 @@ import MostOrdered from "./MostOrdered";
 
 function TopBoardPanel() {
   return (
-    <div className="flex flex-col justify-center items-center   gap-4">
+    <div className="flex flex-col h-full justify-between">
       <MostOrdered />
       <ChartOrder />
     </div>

@@ -2,11 +2,19 @@ import { ChevronDown } from "lucide-react";
 import plateImg from "../../assets/soup.png";
 import SelectInput from "../../ui/SelectInput";
 import { Avatar, AvatarImage } from "../../components/ui/avatar";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
 const ITEMS = [
   { name: "Spicy seasoned seafood noodles", ordered: 200 },
   { name: "Salted pasta with mushroom sauce", ordered: 120 },
+  { name: "Beef dumpling in hot and sour soup", ordered: 80 },
   { name: "Beef dumpling in hot and sour soup", ordered: 80 },
 ];
 
@@ -19,7 +27,6 @@ function MostOrdered() {
         <SelectInput
           options={["Today", "Last Week", "Last Month"]}
           icon={<ChevronDown size={20} className="text-white" />}
-          onChange={(val) => console.log(val)}
         />
       </CardHeader>
 
@@ -40,14 +47,10 @@ function MostOrdered() {
             </li>
           ))}
         </ul>
-
-        <button
-          type="button"
-          className="mt-4 w-full rounded-lg border border-primary py-3 text-sm font-medium text-primary transition hover:bg-primary/10"
-        >
-          View All
-        </button>
       </CardContent>
+      <CardFooter className="justify-center">
+        <ShadeIconBtn label="View All" type={"secondary"} size={"full"} />
+      </CardFooter>
     </Card>
   );
 }

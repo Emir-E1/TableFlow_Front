@@ -1,7 +1,7 @@
 import Input from "../../ui/Input";
 import { ChevronDown } from "lucide-react";
 
-function PayementOrderType() {
+function PaymentOrderType() {
   return (
     <div className="grid grid-cols-2 gap-3">
       <div className="flex flex-col gap-2">
@@ -16,4 +16,4 @@ function PayementOrderType() {
   );
 }
 
-export default PayementOrderType;
+export default PaymentOrderType;

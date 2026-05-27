@@ -5,27 +5,38 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         primary:
-          "bg-primary  rounded-xl text-white-foreground shadow hover:bg-primary/90",
-        editing:
-          " w-full border-t   border-gray-700/30 bg-primary/30 py-4 transition-colors hover:bg-primary/40",
+          "rounded-xl bg-primary text-white shadow shadow-primary/30 hover:bg-primary/90",
         secondary:
-          "text-primary rounded-xl border-2 border-primary hover:bg-primary/40",
-        outline: " bg-base-dark-1 rounded-xl text-white-foreground shadow p-4 ",
+          "rounded-xl border-2 border-primary text-primary hover:bg-primary/10",
+        editing:
+          "w-full border-t border-gray-700/30 bg-primary/30 py-4 transition-colors hover:bg-primary/40",
+        outline:
+          "rounded-xl border-2 border-base-dark-line bg-base-dark-1 text-white shadow hover:bg-white/5",
+        select: "rounded-xl bg-purplish text-white shadow",
+        paymentMethod:
+          "h-auto min-w-0 flex-col gap-2 rounded-2xl border-2 border-base-dark-line bg-transparent px-3 py-5 text-lg text-white shadow-none hover:border-white/25 hover:bg-white/5 [&_svg]:size-5 [&_svg]:text-slate-300",
       },
       size: {
-        default: " p-4  min-w-48",
+        default: "min-w-48 p-4",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
-        icon: "h-12 w-12 p-4 rounded-xl hover:bg-primary/50 hover:text-white",
+        full: "w-full p-4",
+        icon: "h-12 w-12 rounded-xl p-0 [&_svg]:size-5",
       },
     },
+    compoundVariants: [
+      {
+        variant: "paymentMethod",
+        className: "[&_svg]:size-5",
+      },
+    ],
     defaultVariants: {
-      variant: "default",
+      variant: "primary",
       size: "default",
     },
   }

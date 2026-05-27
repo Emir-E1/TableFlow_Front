@@ -31,7 +31,7 @@ const router = createBrowserRouter([
           {
             path: "orders",
             element: <Orders />,
-            children: [{ element: null, path: "payements" }],
+            children: [{ element: null, path: "payments" }],
           },
         ],
       },

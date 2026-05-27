@@ -29,6 +29,3 @@ function SegmentedControl({ options = [], defaultValue, onChange }) {
 }
 
 export default SegmentedControl;
-
-// Usage
-// <SegmentedControl options={["Dine In", "To Go", "Delivery"]} onChange={(val) => console.log(val)} />

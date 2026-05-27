@@ -1,6 +1,6 @@
 import Input from "../../ui/Input";
 
-function PayementDetails() {
+function PaymentDetails() {
   return (
     <div className="flex flex-col gap-4 border-b border-base-dark-line pb-6">
       <div className="flex flex-col gap-2">
@@ -25,4 +25,4 @@ function PayementDetails() {
   );
 }
 
-export default PayementDetails;
+export default PaymentDetails;

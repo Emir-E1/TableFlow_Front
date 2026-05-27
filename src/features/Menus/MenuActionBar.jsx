@@ -1,4 +1,4 @@
-import { ChevronDown, Home } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import SelectInput from "../../ui/SelectInput";
 
 function MenuActionBar() {
@@ -8,7 +8,6 @@ function MenuActionBar() {
       <SelectInput
         options={["Dine In", "To Go", "Delivery"]}
         icon={<ChevronDown size={20} className="text-white" />}
-        onChange={(val) => console.log(val)}
       />
     </div>
   );

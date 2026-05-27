@@ -19,7 +19,6 @@ function ChartOrder() {
         <SelectInput
           options={["Today", "Last Week", "Last Month"]}
           icon={<ChevronDown size={20} className="text-white" />}
-          onChange={(val) => console.log(val)}
         />
       </CardHeader>
 

@@ -1,16 +1,66 @@
-import { Button } from "../components/ui/button";
-function ShadeIconBtn({ label, onClick, Icon, type, size }) {
+import { forwardRef } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const STYLE_VARIANTS = new Set([
+  "primary",
+  "secondary",
+  "editing",
+  "outline",
+  "select",
+  "paymentMethod",
+]);
+
+const ShadeIconBtn = forwardRef(function ShadeIconBtn(
+  {
+    label,
+    children,
+    onClick,
+    Icon,
+    type,
+    variant,
+    size,
+    selected = false,
+    className,
+    ...props
+  },
+  ref
+) {
+  let resolvedVariant = variant ?? "primary";
+  let htmlType = "button";
+
+  if (type != null) {
+    if (STYLE_VARIANTS.has(type)) {
+      resolvedVariant = type;
+    } else {
+      htmlType = type;
+    }
+  }
+
+  const isPaymentMethod = resolvedVariant === "paymentMethod";
+
   return (
     <Button
-      variant={type}
-      className="flex items-center justify-center gap-2"
-      onClick={onClick}
+      ref={ref}
+      type={htmlType}
+      variant={resolvedVariant}
       size={size}
+      className={cn(
+        !isPaymentMethod && (label || children) && "gap-2",
+        isPaymentMethod &&
+          selected &&
+          "border-primary bg-base-form hover:border-primary hover:bg-base-form",
+        className
+      )}
+      onClick={onClick}
+      {...props}
     >
       {Icon}
-      {label}
+      {children ?? (label != null ? <span>{label}</span> : null)}
     </Button>
   );
-}
+});
+
+ShadeIconBtn.displayName = "ShadeIconBtn";
 
 export default ShadeIconBtn;

@@ -6,7 +6,7 @@ function Dashboard() {
     //FLEX ROW 1/1
     //DASHBOARD
     //TOPBOARD
-    <div className="bg-base-dark-1 flex min-h-full w-full gap-6 p-6">
+    <div className="bg-base-dark-1 flex h-full w-full gap-6 p-6">
       <div className=" flex-1 ">
         <DashboardPanel />
       </div>

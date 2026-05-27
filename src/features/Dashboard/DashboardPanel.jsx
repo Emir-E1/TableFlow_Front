@@ -6,7 +6,7 @@ import DashboardSummary from "./DashboardStats";
 
 function DashboardPanel() {
   return (
-    <div className="flex min-h-0 flex-col gap-6">
+    <div className="flex h-full flex-col justify-between gap-6">
       <DashboardHeader />
       <DashboardSummary />
       <DashboardReports />

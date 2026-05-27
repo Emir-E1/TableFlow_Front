@@ -1,96 +1,57 @@
 # TableFlow
 
-## Overview
+TableFlow is a **front-end desktop prototype** of a restaurant POS/admin interface built for portfolio purposes.
 
-TableFlow is a semi-fullstack web platform designed to manage restaurant operations. It allows both staff and customers to interact with the system.
+## Current Scope
 
-On the admin side, you can manage:
+- Desktop-first dark UI inspired by a partially completed Figma design
+- Main flows: menu browsing, order panel, payment modal, dashboard, product management mockup
+- Built and iterated solo as a learning project
 
-- Orders
-- Customers
-- Menu items (products)
-- Payments
-- Settings
+## Tech Stack (Actual)
 
-On the client side, users can:
-
-- Browse the menu
-- Place orders
-- Choose between dine-in or takeaway
-
-This project is mainly built for portfolio purposes and may be upgraded to a fullstack application in the future.
-
----
-
-## Tech Stack
-
-- React (JavaScript)
+- React 19
+- React Router DOM 6
 - Vite
 - Tailwind CSS
-- Redux
-- React Query
-- React Router v7
-- Lucide React Icons
+- Radix UI primitives (`dialog`, `dropdown-menu`, `avatar`, `scroll-area`)
+- shadcn-style component patterns (`cva`, `clsx`, `tailwind-merge`)
+- Recharts
+- Lucide icons
 
----
+## Data & Limitations
 
-## Design Note
-
-The UI design was based on a Figma file.
-
-Warning:  
-The Figma design was incomplete and did not include mobile layouts.  
-As a result, the application is currently optimized for desktop only.  
-This was one of the main challenges during development.
-
----
+- Data is currently mock/local (no real backend persistence yet)
+- Actions such as adding a dish are UI/demo behaviors for now
+- The design source was incomplete and had no mobile version
+- This project is intentionally **desktop-only** at this stage
 
 ## Project Structure
 
-src/
-│
-├── assets/ # Images and static files
-├── components/ # General reusable components
-├── features/ # Feature-based structure
-│ ├── dashboard/
-│ ├── menus/
-│ ├── orders/
-│ ├── payments/
-│ ├── product-manage/
-│ └── settings/
-│
-├── pages/ # Application pages (.jsx)
-│ ├── AppLayout/
-│ ├── Dashboard/
-│ ├── GetStarted/
-│ ├── Home/
-│ ├── Orders/
-│ ├── ProductManagement/
-│ └── Settings/
-│
-├── ui/ # Reusable UI components
+`src/`
+- `assets/` static files
+- `components/` shared low-level UI primitives
+- `features/` feature modules (`Dashboard`, `Menus`, `Order`, `Payments`, `ProductManage`, `Settings`)
+- `Pages/` route-level screens
+- `ui/` app-level reusable UI wrappers/components
+- `data/` local mock data sources
 
----
+## Run Locally
 
-## Data Handling
+```bash
+npm install
+npm run dev
+```
 
-The project uses Mock API to simulate a backend and handle data fetching.
+## Build
 
----
+```bash
+npm run build
+```
 
-## Future Improvements
+## Roadmap
 
-- Convert the project into a fully functional fullstack application
-- Add mobile responsiveness
-- Improve API integration with a real backend
-
----
-
-## Purpose
-
-This project showcases my ability to:
-
-- Build scalable React applications
-- Use a feature-based architecture
-- Manage state efficiently
-- Work with modern frontend tools
+- Connect flows to a real API/backend
+- Add realistic cart and order state management
+- Improve accessibility and loading/empty/error states
+- Add responsive strategy for tablet/mobile

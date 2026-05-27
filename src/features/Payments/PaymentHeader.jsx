@@ -1,4 +1,4 @@
-function PaymenentHeader() {
+function PaymentHeader() {
   return (
     <div className="border-b border-base-dark-line pb-6">
       <h1 className="text-4xl font-semibold">Payment</h1>
@@ -7,4 +7,4 @@ function PaymenentHeader() {
   );
 }
 
-export default PaymenentHeader;
+export default PaymentHeader;

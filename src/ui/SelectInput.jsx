@@ -8,8 +8,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { Button } from "@/components/ui/button";
-
 function SelectInput({ options = [], value, onChange, icon }) {
   const [selected, setSelected] = useState(value ?? options[0]);
 
@@ -21,10 +19,10 @@ function SelectInput({ options = [], value, onChange, icon }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <ShadeIconBtn label={selected} Icon={icon} type="outline" />
+        <ShadeIconBtn label={selected} Icon={icon} type="select" />
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)] bg-base-dark-1 border-white/10">
+      <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)] bg-purplish border-white/10">
         {options.map((option) => (
           <DropdownMenuItem
             key={option}

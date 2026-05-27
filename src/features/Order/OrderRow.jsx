@@ -1,7 +1,6 @@
-import { Trash, Trash2Icon } from "lucide-react";
+import { Trash } from "lucide-react";
 import Input from "../../ui/Input";
 import soup from "../../assets/soup.png";
-import IconButton from "../../ui/IconButton";
 import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
 function OrderRow() {
@@ -16,7 +15,7 @@ function OrderRow() {
           />
           <div className="min-w-0">
             <h3 className=" font-semibold">Spicy Soup Pasta ....</h3>
-            <p className="text-base-line">$ 2.45</p>
+            <p className="text-text-light">$ 2.45</p>
           </div>
         </div>
         <div className="flex shrink-0 items-center gap-4">
@@ -28,7 +27,12 @@ function OrderRow() {
         <div className="min-w-0 flex-1">
           <Input placeholder="Please, just a little bit spicy only." />
         </div>
-        <ShadeIconBtn type="secondary" size="icon" Icon={<Trash size={20} />} />
+        <ShadeIconBtn
+          variant="secondary"
+          size="icon"
+          Icon={<Trash size={20} />}
+          aria-label="Remove item"
+        />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import Button from "../../ui/Button";
 import SegmentedControl from "../../ui/SegmentedControl";
 
 function OrderHeader() {

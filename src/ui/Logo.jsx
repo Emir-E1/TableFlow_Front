@@ -1,7 +1,7 @@
 import logo from "../assets/Logo.svg";
 
-function Logo() {
-  return <img src={logo} alt="logo_restaurant" className="h-16 w-16" />;
+function Logo({ className = "h-16 w-16" }) {
+  return <img src={logo} alt="TableFlow" className={className} />;
 }
 
 export default Logo;

@@ -1,4 +1,3 @@
-import Button from "../../ui/Button";
 import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
 function OrderBill({ onPay }) {

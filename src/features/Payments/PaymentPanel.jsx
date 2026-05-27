@@ -1,13 +1,12 @@
-import Button from "../../ui/Button";
-import PaymenentHeader from "./PaymenentHeader";
-import PayementForm from "./PayementForm";
+import PaymentHeader from "./PaymentHeader";
+import PaymentForm from "./PaymentForm";
 import ShadeIconBtn from "../../ui/ShadeIconBtn";
 
-function PayementPanel({ onClose }) {
+function PaymentPanel({ onClose }) {
   return (
     <div className="flex h-full min-h-full flex-col p-8 text-white">
-      <PaymenentHeader />
-      <PayementForm />
+      <PaymentHeader />
+      <PaymentForm />
       <div className="mt-auto grid grid-cols-2 gap-3 pt-10">
         <ShadeIconBtn label="Cancel" onClick={onClose} type="secondary" />
         <ShadeIconBtn label="Confirm Payment" type="primary" />
@@ -16,4 +15,4 @@ function PayementPanel({ onClose }) {
   );
 }
 
-export default PayementPanel;
+export default PaymentPanel;
